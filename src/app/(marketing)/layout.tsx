@@ -43,7 +43,7 @@ const MarketingLayout = async ({ children }: { children: React.ReactNode }) => {
 
             <main>{children}</main>
 
-            <footer className="flex flex-col w-full md:w-[1128px] px-4 py-4  ">
+            <footer className="flex flex-col w-full md:w-[1128px] px-4 py-4 md:px-0 ">
                 <div className="flex flex-col md:flex-row md:justify-between py-2 w-full border-b border-t border-gray-600 gap-y-8">
                     <div className="md:max-w-25/100">
                         <p className="font-bold text-brand-color-primary">Mode</p>
@@ -74,7 +74,7 @@ const MarketingLayout = async ({ children }: { children: React.ReactNode }) => {
                             <p className="font-bold">Legal</p>
                             <ul className="flex flex-col gap-x-8">
                                 {legal.map((v, i) =>
-                                    <Link key={i} href={`/${v.toLowerCase()}`}>
+                                    <Link key={i} href={`/${v.toLowerCase().replaceAll(" ","-")}`}>
                                         <li className="cursor-pointer hover:text-brand-color-primary">{v}</li>
                                     </Link>
                                 )}
