@@ -22,7 +22,7 @@ interface IFormGroup extends React.HTMLAttributes<HTMLDivElement> {
 
 const FormGroup: React.FC<IFormGroup> = ({ children, className, ...props }) => {
     return (
-        <div className={cn("flex flex-col gap-y-6", className)} {...props}>
+        <div className={cn("flex flex-col gap-y-2", className)} {...props}>
             {children}
         </div>
     )
@@ -36,7 +36,7 @@ interface IFormLabel extends React.LabelHTMLAttributes<HTMLLabelElement> {
 
 const FormLabel: React.FC<IFormLabel> = ({ children, className, ...props }) => {
     return (
-        <label className={cn('text-sm font-medium text-gray-700', className)} {...props}>
+        <label className={cn('text-sm font-medium text-gray-200', className)} {...props}>
             {children}
         </label >
     )
@@ -51,7 +51,7 @@ const FormInput = forwardRef<HTMLInputElement, TFormInput>(
         return (
             <input
                 ref={ref}
-                className={cn('flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50', className)}
+                className={cn('flex h-10 w-full rounded-md px-3 py-2 text-sm placeholder:text-gray-400  focus:ring-2 focus:ring-gray-800 disabled:cursor-not-allowed disabled:opacity-50', className)}
                 {...props}
             />
         )

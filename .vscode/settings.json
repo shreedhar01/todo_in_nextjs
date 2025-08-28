@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
+        "createuser",
+        "hashpassword",
         "neondatabase",
-        "turbopack"
+        "turbopack",
+        "vercel"
     ]
 }
