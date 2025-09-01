@@ -3,6 +3,7 @@
         "createuser",
         "hashpassword",
         "neondatabase",
+        "partialdata",
         "turbopack",
         "vercel"
     ]

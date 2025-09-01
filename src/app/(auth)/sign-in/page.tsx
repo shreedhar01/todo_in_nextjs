@@ -6,8 +6,7 @@ import {
     FormGroup,
     FormLabel,
     FormInput,
-    FormError,
-    FormDescription
+    FormError
 } from "@/src/components/ui/Form"
 import Link from "next/link"
 import { useActionState } from "react"
@@ -53,7 +52,7 @@ const SignIn = () => {
                 </div>
                 <Form
                     action={formAction}
-                    className="border border-neutral-800 bg-neutral-900 rounded-xl p-8 max-w-30/100 min-w-30/100"
+                    className="   max-w-30/100 md:min-w-30/100"
                 >
                     {state?.message && !state.success && (
                         <FormError>{state.message}</FormError>
@@ -66,7 +65,6 @@ const SignIn = () => {
                             type="email"
                             required
                             disabled={isPending}
-                            className="bg-neutral-600"
                             placeholder="Enter your email"
                         />
                         {state?.errors?.email && (
@@ -84,7 +82,6 @@ const SignIn = () => {
                             autoComplete="current-password"
                             required
                             disabled={isPending}
-                            className="bg-neutral-600"
                             placeholder="Enter your password"
                         />
                         {state?.errors?.password && (

@@ -8,7 +8,11 @@ interface IForm extends React.FormHTMLAttributes<HTMLFormElement> {
 
 const Form: React.FC<IForm> = ({ children, className, ...props }) => {
     return (
-        <form className={cn("flex flex-col gap-y-6", className)} {...props}>
+        <form
+            className={cn("flex flex-col bg-neutral-900 border border-neutral-800 rounded-xl  gap-y-6 p-8", className)}
+            {...props}
+        >
+
             {children}
         </form>
     )
@@ -51,7 +55,7 @@ const FormInput = forwardRef<HTMLInputElement, TFormInput>(
         return (
             <input
                 ref={ref}
-                className={cn('flex h-10 w-full rounded-md px-3 py-2 text-sm placeholder:text-gray-400  focus:ring-2 focus:ring-gray-800 disabled:cursor-not-allowed disabled:opacity-50', className)}
+                className={cn('flex h-10 w-full rounded-md px-3 py-2 text-sm bg-neutral-600 placeholder:text-gray-400  focus:ring-2 focus:ring-gray-800 disabled:cursor-not-allowed disabled:opacity-50', className)}
                 {...props}
             />
         )
@@ -68,7 +72,7 @@ const FormTextArea = forwardRef<HTMLTextAreaElement, TFormTextArea>(
         return (
             <textarea
                 ref={ref}
-                className={cn('flex min-h-[80px] w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50', className)}
+                className={cn('flex min-h-[80px] w-full rounded-md px-3 py-2 text-sm bg-neutral-600 placeholder:text-gray-400  focus:ring-2 focus:ring-gray-800 disabled:cursor-not-allowed disabled:opacity-50', className)}
                 {...props}
             />
         )
@@ -87,7 +91,7 @@ const FormSelect = forwardRef<HTMLSelectElement, IFormSelect>(
         return (
             <select
                 ref={ref}
-                className={cn('flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50', className)}
+                className={cn('flex h-10 w-full rounded-md px-3 py-2 text-sm bg-neutral-600 placeholder:text-gray-400  focus:ring-2 focus:ring-gray-800 disabled:cursor-not-allowed disabled:opacity-50', className)}
                 {...props}
             >
                 {
@@ -127,7 +131,7 @@ const FormError: React.FC<IFormParagraph> = ({ children, className, ...props }) 
 const FormDescription: React.FC<IFormParagraph> = ({ children, className, ...props }) => {
     return (
         <p
-            className={cn('text-xs text-gray-500',className)}
+            className={cn('text-xs text-gray-500', className)}
             {...props}
         >
             {children}
