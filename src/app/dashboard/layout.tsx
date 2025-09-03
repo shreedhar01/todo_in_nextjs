@@ -8,10 +8,9 @@ import Link from "next/link";
 export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
     // await getCurrentUser();
     const issues = await getIssues();
-    let touch:boolean = false
     return (
-        <div className={`${touch ? "flex min-h-screen w-full" : "flex justify-end"}`}>
-            <div className="flex flex-col justify-between fixed top-0 left-0 max-h-screen min-h-screen w-64 border border-neutral-600 bg-neutral-900 p-4">
+        <div className="flex min-h-screen w-full  md:justify-end">
+            <div className="hidden md:flex flex-col justify-between fixed top-0 left-0 max-h-screen min-h-screen w-64 border border-neutral-600 bg-neutral-900 p-4">
                 <div className="flex flex-col gap-y-8">
                     <p className="text-xl font-bold">Mode</p>
                     <div className="flex flex-col gap-y-4">
@@ -72,13 +71,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
                     <p>hy</p>
                 </div>
             </div>
-            <div className={`${touch ? "flex w-full" : "flex w-[83%]"}`}>
-                <div
-                
-                className=""
-                >
-                    {touch ? <SidebarCloseIcon/> : <SidebarOpenIcon/>}
-                </div>
+            <div className="flex w-full md:max-w-[83%]">
                 {children}
             </div>
         </div>
