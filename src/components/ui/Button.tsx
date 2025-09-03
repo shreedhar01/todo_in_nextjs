@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils";
 
 interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     isLoading?: boolean,
-    size?: "sm" | "md" | "lg",
-    varient?: "primary" | "secondary" | "outline" | "ghost" | "danger"
+    size?: "smm" |"sm" | "md" | "lg",
+    varient?: "primary" | "secondary" | "outline" | "ghost" | "danger" | "success" | "custome"
 }
 
 const Button: React.FC<IButton> = ({
@@ -29,9 +29,12 @@ const Button: React.FC<IButton> = ({
         ghost:
             'bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-100 dark:text-gray-100',
         danger: 'bg-red-600 text-white hover:bg-red-700',
+        success: 'bg-green-600 text-white hover:bg-green-700',
+        custome:'bg-black text-white'
     }
 
     const sizes = {
+        smm: 'h-6 px-1 text-xs rounded-sm',
         sm: 'h-8 px-3 text-xs rounded-md',
         md: 'h-10 px-4 py-2 text-sm rounded-md',
         lg: 'h-12 px-6 py-3 text-base rounded-lg',

@@ -36,7 +36,7 @@ const IssueForm: React.FC<IssueFormProps> = ({ issue, userId, isEditing = false 
             const result = isEditing ? await updateIssues(Number(issue!.id), data) : await createIssues(data)
             if (result.success) {
                 router.refresh()
-                if (!isEditing) router.push("/dashboard")
+                router.push("/dashboard")
             }
 
             return result
@@ -74,6 +74,7 @@ const IssueForm: React.FC<IssueFormProps> = ({ issue, userId, isEditing = false 
                     minLength={3}
                     maxLength={50}
                     disabled={isPending}
+                    defaultValue={issue?.title}
                     aria-describedby="title-error"
                     placeholder="Enter a title"
                 />
@@ -89,6 +90,7 @@ const IssueForm: React.FC<IssueFormProps> = ({ issue, userId, isEditing = false 
                     id="description"
                     name="description"
                     disabled={isPending}
+                    defaultValue={issue?.description || ""}
                     aria-describedby="description-error"
                     placeholder="Enter a Description"
                 />

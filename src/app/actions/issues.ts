@@ -71,7 +71,9 @@ export async function updateIssues(id: number, data: Partial<IssuesData>): Promi
         }
 
         const partialdata = IssuesSchema.partial()
-        const validate = await IssuesSchema.safeParse(partialdata)
+        const validate = await partialdata.safeParse(data)
+        // console.log(data)
+        // console.log(validate)
         if (!validate.success) {
             return {
                 success: false,
@@ -118,6 +120,7 @@ export async function deleteIssues(id: number) {
         }
 
         await db.delete(issuesTable).where(eq(issuesTable.id, id))
+        revalidateTag("issues")
         return{
             success:true,
             message:"Issue Delete successfully"

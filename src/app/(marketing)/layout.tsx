@@ -1,13 +1,12 @@
-import Link from "next/link"
-import Button from "@/src/components/ui/Button"
-import Menu from "@/src/components/ui/Menu"
-
-
+import Link from "next/link";
+import Button from "@/src/components/ui/Button";
+import Menu from "@/src/components/ui/Menu";
+// import ThemeSwitcher from "@/src/components/ThemeSwitcher";
 
 const MarketingLayout = async ({ children }: { children: React.ReactNode }) => {
-    const products = ["Features", "Pricing", "FAQ"]
-    const resources = ["Documentation", "Github"]
-    const legal = ["Terms of Service"]
+    const products = ["Features", "Pricing", "FAQ"];
+    const resources = ["Documentation", "Github"];
+    const legal = ["Terms of Service"];
 
     return (
         <div className="flex flex-col items-center w-full">
@@ -15,29 +14,36 @@ const MarketingLayout = async ({ children }: { children: React.ReactNode }) => {
                 <nav className="flex justify-between items-center w-full">
                     <div className="flex items-center justify-center gap-x-16">
                         <Link href="/">
-                            <p className="text-2xl font-bold text-brand-color-primary">Mode</p>
+                            <p className="text-2xl font-bold text-brand-color-primary">
+                                Mode
+                            </p>
                         </Link>
                         <ul className="hidden md:flex gap-x-8">
-                            {products.map((v, i) =>
+                            {products.map((v, i) => (
                                 <Link key={i} href={`/${v.toLowerCase()}`}>
-                                    <li className="cursor-pointer hover:text-brand-color-primary">{v}</li>
+                                    <li className="cursor-pointer hover:text-brand-color-primary">
+                                        {v}
+                                    </li>
                                 </Link>
-                            )}
+                            ))}
                         </ul>
                     </div>
 
-                    {/* for big devices */}
-                    <div className="hidden md:flex gap-x-8">
-                        <Link href="/sign-in">
-                            <Button varient="secondary" size="md" children="Sign In" />
-                        </Link>
-                        <Link href="/sign-up">
-                            <Button size="md" children="Sign Up" />
-                        </Link>
+                    <div className="flex items-center gap-x-2">
+                        {/* <ThemeSwitcher /> */}
+                        {/* for big devices */}
+                        <div className="hidden md:flex items-center gap-x-8">
+                            <Link href="/sign-in">
+                                <Button varient="secondary" size="md" children="Sign In" />
+                            </Link>
+                            <Link href="/sign-up">
+                                <Button size="md" children="Sign Up" />
+                            </Link>
+                        </div>
+                        {/* for small devices */}
+                        <Menu onclick={true} />
                     </div>
 
-                    {/* for small devices */}
-                    <Menu onclick={true} />
                 </nav>
             </header>
 
@@ -53,39 +59,50 @@ const MarketingLayout = async ({ children }: { children: React.ReactNode }) => {
                         <div className="flex flex-col gap-y-2">
                             <p className="font-bold">Products</p>
                             <ul className="flex flex-col gap-x-8">
-                                {products.map((v, i) =>
+                                {products.map((v, i) => (
                                     <Link key={i} href={`/${v.toLowerCase()}`}>
-                                        <li className="cursor-pointer hover:text-brand-color-primary">{v}</li>
+                                        <li className="cursor-pointer hover:text-brand-color-primary">
+                                            {v}
+                                        </li>
                                     </Link>
-                                )}
+                                ))}
                             </ul>
                         </div>
                         <div className="flex flex-col gap-y-2">
                             <p className="font-bold">Resources</p>
                             <ul className="flex flex-col gap-x-8">
-                                {resources.map((v, i) =>
+                                {resources.map((v, i) => (
                                     <Link key={i} href={`/${v.toLowerCase()}`}>
-                                        <li className="cursor-pointer hover:text-brand-color-primary">{v}</li>
+                                        <li className="cursor-pointer hover:text-brand-color-primary">
+                                            {v}
+                                        </li>
                                     </Link>
-                                )}
+                                ))}
                             </ul>
                         </div>
                         <div className="flex flex-col gap-y-2">
                             <p className="font-bold">Legal</p>
                             <ul className="flex flex-col gap-x-8">
-                                {legal.map((v, i) =>
-                                    <Link key={i} href={`/${v.toLowerCase().replaceAll(" ","-")}`}>
-                                        <li className="cursor-pointer hover:text-brand-color-primary">{v}</li>
+                                {legal.map((v, i) => (
+                                    <Link
+                                        key={i}
+                                        href={`/${v.toLowerCase().replaceAll(" ", "-")}`}
+                                    >
+                                        <li className="cursor-pointer hover:text-brand-color-primary">
+                                            {v}
+                                        </li>
                                     </Link>
-                                )}
+                                ))}
                             </ul>
                         </div>
                     </div>
                 </div>
-                <p className="text-center text-gray-500">© 2025 Mode. All rights reserved.</p>
+                <p className="text-center text-gray-500">
+                    © 2025 Mode. All rights reserved.
+                </p>
             </footer>
         </div>
-    )
-}
+    );
+};
 
-export default MarketingLayout
+export default MarketingLayout;
