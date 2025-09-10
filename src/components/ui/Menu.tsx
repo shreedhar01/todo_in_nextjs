@@ -30,10 +30,10 @@ const Menu: React.FC<IMenu> = ({ onclick }) => {
                 </ul>
                 <div className="flex justify-between">
                     <Link href="/sign-in">
-                        <Button varient="secondary" size="sm" children="Sign In" />
+                        <Button varient="secondary" size="sm" >Sign In</Button>
                     </Link>
                     <Link href="/sign-up">
-                        <Button size="sm" children="Sign Up" />
+                        <Button size="sm" >Sign Up</Button>
                     </Link>
                 </div>
             </div>

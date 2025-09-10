@@ -67,7 +67,7 @@ const IssueForm: React.FC<IssueFormProps> = ({ issue, userId, isEditing = false 
                 </FormError>
             )}
             <FormGroup>
-                <FormLabel htmlFor="title" children="Title" />
+                <FormLabel htmlFor="title" >Title</FormLabel>
                 <FormInput
                     id="title"
                     name="title"
@@ -85,7 +85,7 @@ const IssueForm: React.FC<IssueFormProps> = ({ issue, userId, isEditing = false 
                 }
             </FormGroup>
             <FormGroup>
-                <FormLabel htmlFor="description" children="Description" />
+                <FormLabel htmlFor="description" >Description</FormLabel>
                 <FormTextArea
                     id="description"
                     name="description"
@@ -104,7 +104,7 @@ const IssueForm: React.FC<IssueFormProps> = ({ issue, userId, isEditing = false 
             </FormGroup>
             <div className="grid md:grid-cols-2 gap-x-2 gap-y-6">
                 <FormGroup>
-                    <FormLabel htmlFor="status" children="Status" />
+                    <FormLabel htmlFor="status" >Status</FormLabel>
                     <FormSelect
                         id="status"
                         name="status"
@@ -119,7 +119,7 @@ const IssueForm: React.FC<IssueFormProps> = ({ issue, userId, isEditing = false 
                     }
                 </FormGroup>
                 <FormGroup>
-                    <FormLabel htmlFor="priority" children="Priority" />
+                    <FormLabel htmlFor="priority" >Priority</FormLabel>
                     <FormSelect
                         id="priority"
                         name="priority"
@@ -138,11 +138,10 @@ const IssueForm: React.FC<IssueFormProps> = ({ issue, userId, isEditing = false 
                 <Button
                     type="button"
                     size="md"
-                    children="Cancel"
                     onClick={() => router.back()}
                     className="bg-red-500 hover:bg-red-700"
                     isLoading={isPending}
-                />
+                >Cancel</Button>
                 <Button
                     size="md"
                     type="submit"

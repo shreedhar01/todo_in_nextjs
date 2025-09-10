@@ -7,7 +7,7 @@ const LandingPage = async() => {
                 <div className="flex flex-col items-center justify-center text-center gap-y-8">
                     <p className="font-bold md:font-extrabold text-4xl md:text-5xl md:w-50/100">Issue tracking <span className="text-brand-color-primary">simplified.</span></p>
                     <p className="text-xl text-neutral-400 md:w-75/100">A minimal and elegant issue tracking tool for modern teams. Manage your projects with ease.</p>
-                    <Button className="bg-brand-color-primary" children="Get Started"/>
+                    <Button className="bg-brand-color-primary" >Get Started</Button>
                 </div>
             </main>
         </div>

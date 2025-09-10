@@ -53,8 +53,7 @@ const SignUp = () => {
                 <FormGroup>
                     <FormLabel
                         htmlFor="email"
-                        children="Email"
-                    />
+                    >Email</FormLabel>
                     <FormInput
                         id="email"
                         name="email"
@@ -69,7 +68,7 @@ const SignUp = () => {
                     }
                 </FormGroup>
                 <FormGroup>
-                    <FormLabel htmlFor="password" children="Password" />
+                    <FormLabel htmlFor="password" >Password</FormLabel>
                     <FormInput
                         id="password"
                         name="password"
@@ -84,7 +83,7 @@ const SignUp = () => {
                     }
                 </FormGroup>
                 <FormGroup>
-                    <FormLabel htmlFor="confirmPassword" children="Confirm Password" />
+                    <FormLabel htmlFor="confirmPassword" >Confirm Password</FormLabel>
                     <FormInput
                         id="confirmPassword"
                         name="confirmPassword"
@@ -103,9 +102,8 @@ const SignUp = () => {
                         type="submit"
                         isLoading={isPending}
                         size="md"
-                        children="Sign Up"
                         className="w-full"
-                    />
+                    >Sign Up</Button>
                 </div>
                 <div className="text-center">
                     <p className="text-gray-400">Already have an account?

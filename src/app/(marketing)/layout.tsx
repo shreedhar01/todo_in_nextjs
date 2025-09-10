@@ -34,10 +34,10 @@ const MarketingLayout = async ({ children }: { children: React.ReactNode }) => {
                         {/* for big devices */}
                         <div className="hidden md:flex items-center gap-x-8">
                             <Link href="/sign-in">
-                                <Button varient="secondary" size="md" children="Sign In" />
+                                <Button varient="secondary" size="md" >Sign In</Button>
                             </Link>
                             <Link href="/sign-up">
-                                <Button size="md" children="Sign Up" />
+                                <Button size="md" >Sign Up</Button>
                             </Link>
                         </div>
                         {/* for small devices */}

@@ -117,7 +117,7 @@ const Pricing = async() => {
         <div className="flex flex-col w-full md:w-[1128px] py-20 px-4 md:px-0 gap-y-8">
             <div className="flex flex-col text-center gap-y-4">
                 <p className="font-bold text-4xl">Simple, Transparent Pricing</p>
-                <p className="text-xl text-gray-300">Choose the plan that's right for you and your team</p>
+                <p className="text-xl text-gray-300">Choose the plan that&apos;s right for you and your team</p>
             </div>
 
             <div className="flex flex-col md:flex-row gap-y-8 justify-between">
@@ -146,27 +146,24 @@ const Pricing = async() => {
                                     <Link href="/sign-up">
                                         <Button
                                             size="md"
-                                            children="Sign up Free"
                                             className="w-full border border-gray-500 bg-[#1F2937] hover:bg-[#293545]"
-                                        />
+                                        >Sign up Free</Button>
                                     </Link>
                                     : <></>
                                 }
                                 {v.title.toLowerCase() === "pro" ?
                                     <Button
                                         size="md"
-                                        children="Coming Soon"
                                         className="w-full border border-gray-500 bg-[#1d4ed8] hover:bg-[#3262e5]"
-                                    />
+                                    >Coming Soon</Button>
                                     : <></>
                                 }
                                 {v.title.toLowerCase() === "enterprise" ?
                                     <Link href="/contact-us">
                                         <Button
                                             size="md"
-                                            children="Contact Us"
                                             className="w-full border border-gray-500 bg-[#1F2937] hover:bg-[#293545]"
-                                        />
+                                        >Contact Us</Button>
                                     </Link>
                                     : <></>
                                 }

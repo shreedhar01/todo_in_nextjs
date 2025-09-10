@@ -58,7 +58,7 @@ const SignIn = () => {
                         <FormError>{state.message}</FormError>
                     )}
                     <FormGroup>
-                        <FormLabel htmlFor="email" children="Email" />
+                        <FormLabel htmlFor="email">Email</FormLabel>
                         <FormInput
                             id="email"
                             name="email"
@@ -74,7 +74,7 @@ const SignIn = () => {
                         )}
                     </FormGroup>
                     <FormGroup>
-                        <FormLabel children="Password" />
+                        <FormLabel>Password</FormLabel>
                         <FormInput
                             id="password"
                             name="password"
@@ -94,15 +94,14 @@ const SignIn = () => {
                         <Button
                             isLoading={isPending}
                             size="md"
-                            children="Sign In"
                             className="w-full"
-                        />
+                        >Sign In</Button>
                     </div>
                     <div className="flex justify-center w-full">
                         <p
                             className="flex text-gray-400 gap-x-2 "
                         >
-                            Don't have an account?
+                            Don&apos;t have an account?
                             <Link
                                 href="/sign-up"
                                 className="text-gray-300 hover:text-white hover:underline cursor-pointer transition-all duration-600"
