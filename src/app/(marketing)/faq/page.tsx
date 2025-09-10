@@ -1,4 +1,4 @@
-const Faq = ()=>{
+const Faq = async()=>{
     const faq = [
         {
             question:"What is Linear Clone?",

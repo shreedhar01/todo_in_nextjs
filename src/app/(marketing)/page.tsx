@@ -1,6 +1,6 @@
 import Button from "@/src/components/ui/Button"
 
-const LandingPage = () => {
+const LandingPage = async() => {
     return (
         <div className="flex justify-center items-center min-h-screen w-full">
             <main className="flex justify-center">

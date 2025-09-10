@@ -1,4 +1,4 @@
-const Features = () => {
+const Features = async() => {
     const features = [
         {
             title: "Issue Tracking",

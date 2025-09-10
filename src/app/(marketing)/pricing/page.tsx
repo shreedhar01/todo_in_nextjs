@@ -3,7 +3,7 @@ import { CheckIcon, XIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-const Pricing = () => {
+const Pricing = async() => {
     const plans = [
         {
             title: "Free",

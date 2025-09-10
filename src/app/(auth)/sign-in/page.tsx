@@ -52,7 +52,7 @@ const SignIn = () => {
                 </div>
                 <Form
                     action={formAction}
-                    className="   max-w-30/100 md:min-w-30/100"
+                    className="    md:min-w-30/100"
                 >
                     {state?.message && !state.success && (
                         <FormError>{state.message}</FormError>

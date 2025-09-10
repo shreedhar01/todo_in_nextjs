@@ -48,7 +48,7 @@ const SignUp = () => {
             </div>
             <Form
                 action={formAction}
-                className="md:min-w-30/100 max-w-30/100"
+                className="md:min-w-30/100"
             >
                 <FormGroup>
                     <FormLabel
